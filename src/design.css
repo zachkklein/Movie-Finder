@@ -1,0 +1,137 @@
+html{
+    scroll-behavior: smooth;
+ }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    background-color: #FFEADD;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 0px;
+    font-family: 'Amiri', serif;
+    font-weight: bold;
+    font-size: 125%;
+}
+
+header{
+    height: 0;
+}
+
+.homePage{
+    height: 100vh;
+    background-color: #FF6666;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+#formSection {
+    padding: 20px;
+    background-color: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    transition: 0.3s;
+    
+}
+
+#formSection:hover{
+    box-shadow: 3px 6px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+
+
+input[type="submit"] {
+    background-color: #FF6666;
+    border-radius: 30px;
+    color: #FFF;
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    font-family: 'Caprasimo', cursive;
+}
+
+input[type="submit"]:hover {
+    background-color: #FF8989;
+  
+}
+
+
+h1{
+    font-family: 'Caprasimo', cursive;
+    font-size: 150px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 100px;
+}
+
+h3{
+    font-family: 'Caprasimo', cursive;
+    font-size: 50px;
+}
+
+button{
+    background-color: #FF8989;
+    border-radius: 30px;
+    color: #FFF;
+    margin-top: 30px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #FFEADD;
+}
+
+a:hover{
+    color: #5B6476;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    border: 10px;
+    font-family: 'Caprasimo', cursive;
+}
+
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }

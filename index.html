@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Finder</title>
+    <link href="src/design.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Caprasimo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--MAKE FRONT PAGE AND THEN SCROLL TO GENERATOR-->
+    <section class="homePage">
+        <h1>Movie Finder</h1>
+        <!--FIX STYLING -->
+        <h3>Your pair movie recommender</h3>
+        <button><a href="#recommendations">Take me there</a></button>
+    </section>
+
+    <section id="formSection" class="reveal">
+    <form id="movieForm">
+        <label for="genre">Choose a genre:</label>
+        <select id="genre" name="genre">
+        <option value="select">Select an option</option>
+        <option value="comedy">Comedy</option>
+        <option value="romance">Romance</option>
+        <option value="action">Action</option>
+        <option value="horror">Horror</option>
+        <option value="adventure">Adventure</option>
+        <option value="sciFi">Science Fiction</option>
+        </select>
+
+        <label for="actor">Preferred Actor/Actress:</label>
+        <input type="text" id="actor" name="actor" required>
+
+        <label for="language">Enter a language:</label>
+        <!--MAYBE CHANGE TO SELECT-->
+        <input type="text" id="language" name="language" required>
+
+        <label for="length">Choose a length:</label>
+        <select id="length" name="length" required>
+        <option value="select">Select an option</option>
+        <option value="short">Short(00:00-1:20)</option>
+        <option value="medium">Medium(1:20-2:00)</option>
+        <option value="long">Long(2:00-3:15)</option>
+        </select>
+
+        <label for="rating">Choose a content rating:</label>
+        <select id="rating" name="rating" required>
+        <option value="select">Select an option</option>
+        <option value="g">G</option>
+        <option value="pg">PG</option>
+        <option value="pg13">PG-13</option>
+        <option value="r">R</option>
+        </select>
+    
+        <input type="submit" value="Get Recommendations">
+    </form>
+    </section> 
+
+    <div id="recommendations">
+        <!-- Recommendations will be displayed here -->
+    </div>
+
+    <script src="movie.js"></script> 
+
+</body>
+</html>
