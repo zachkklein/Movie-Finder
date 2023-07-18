@@ -1,5 +1,6 @@
 html{
     scroll-behavior: smooth;
+
  }
 
 body {
@@ -39,7 +40,7 @@ header{
     margin-top: 40px;
     margin-bottom: 40px;
     transition: 0.3s;
-    
+    width: 45%;
 }
 
 #formSection:hover{
@@ -78,7 +79,6 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #FF8989;
-  
 }
 
 
@@ -105,7 +105,7 @@ button{
     cursor: pointer;
     text-decoration: none;
     font-size: 30px;
-    transition: 0.3s;
+    transition: 0.7s;
 }
 
 button:hover{
@@ -131,7 +131,48 @@ a{
     transition: 2s all ease;
   }
 
-  .reveal.active{
+.reveal.active{
     transform: translateY(0);
     opacity: 1;
+  }
+
+
+#recommendations {
+    padding: 20px;
+    background-color: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: none;
+    width: 45%;
+    height: 543px;
+    width: 500px;
+    transform: translate3d(58%, -117.2%, 0);
+    transition: 2s;
+}
+
+.fixedLogo {
+    height: 80px;
+    margin: 0px;
+    align-items: left;
+    display: flex;
+    padding-top: 5px;
+    padding-left: 5px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+  }
+
+  #bottomSection{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    max-height: 550px;
+    height: 600px;
+    overscroll-behavior: contain;
+    overflow-y: hidden;
   }

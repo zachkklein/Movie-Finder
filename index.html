@@ -8,17 +8,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Caprasimo&display=swap" rel="stylesheet">
+    <link rel="icon" href="src/MFLOGO.png">
 </head>
 <body>
-    <!--MAKE FRONT PAGE AND THEN SCROLL TO GENERATOR-->
+    <!--This is the code for the landing page-->
     <section class="homePage">
-        <h1>Movie Finder</h1>
-        <!--FIX STYLING -->
+        <img class="fixedLogo" src="src/MFLOGO.png" alt="Movie Finder Logo">
+        <h1 class="top">Movie Finder</h1>
         <h3>Your pair movie recommender</h3>
-        <button><a href="#recommendations">Take me there</a></button>
+        <button><a href="#length">Take me there</a></button>
     </section>
 
+    <div class="bottomSection">
     <section id="formSection" class="reveal">
+    <!--This is the submit form-->
     <form id="movieForm">
         <label for="genre">Choose a genre:</label>
         <select id="genre" name="genre">
@@ -39,7 +42,7 @@
         <input type="text" id="language" name="language" required>
 
         <label for="length">Choose a length:</label>
-        <select id="length" name="length" required>
+        <select class="length" id="length" name="length" required>
         <option value="select">Select an option</option>
         <option value="short">Short(00:00-1:20)</option>
         <option value="medium">Medium(1:20-2:00)</option>
@@ -55,14 +58,23 @@
         <option value="r">R</option>
         </select>
     
-        <input type="submit" value="Get Recommendations">
+        <input type="submit" value="Get Recommendations" id="getRecommendationsBtn">
     </form>
     </section> 
 
-    <div id="recommendations">
-        <!-- Recommendations will be displayed here -->
-    </div>
+     <!--Nice message-->
+    <p>Made with ❤️ in Medford, MA</p>
 
+    <section>
+        <!--This is where results are shown-->
+        <div id="recommendations" class="show-results">
+            <!-- ADD RESULTS HERE -->
+    </div>
+    </section>
+    </div>
+    
+
+    <!--This connecting javascript doc with html-->
     <script src="movie.js"></script> 
 
 </body>

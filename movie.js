@@ -14,3 +14,19 @@ function reveal() {
   }
   
   window.addEventListener("scroll", reveal);
+
+  //Makes form move left when submitted
+  const getRecommendationsBtn = document.getElementById('getRecommendationsBtn');
+  const formSection = document.getElementById('formSection');
+  const recommendationsSection = document.getElementById('recommendations');
+
+  getRecommendationsBtn.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent form submission POSSIBLE ISSUE!!!
+
+      // Move the form section to the left
+      formSection.style.transform = 'translateX(-55%)';
+
+      // Display the recommendations section
+      recommendationsSection.style.display = 'block';
+      
+  });
