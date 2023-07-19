@@ -1,10 +1,10 @@
-# Tufts Coding Academy 2023:
+## Tufts Coding Academy 2023
 # Movie Recommender
  A browser-based program that recommends movies to those who are stuck for hours trying to figure out what to watch
 
 
 
-## Interaction/Getting Started
+### Interaction/Getting Started
 Users will be prompted for specific prerequisites to find the perfect movie such as genre, specific actors/actresses, language, and preferred year. The program will output movies depending on what the user inputted.
 
 
@@ -40,12 +40,11 @@ There will be no issues
 
 ## Authors
 
-Zachary Klein,
-Yichen Cai,
-Owen Du,
-Matthew Kim,
-and
-Andy Wang,
+* Zachary Klein
+* Yichen Cai
+* Owen Du
+* Matthew Kim
+* Andy Wang
 
 
 
