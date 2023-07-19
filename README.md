@@ -4,7 +4,6 @@
 
 
 
-
 ## Interaction/Getting Started
 Users will be prompted for specific prerequisites to find the perfect movie such as maturity rating, specific actors/actresses, genre, etc. and the program will output movies depending on what the user inputted.
 
@@ -35,11 +34,11 @@ There will be no issues
 
 ## Authors
 
-Zachary Klein
-Owen Du
-Matthew Kim
-Andy Wang
-Yichen Cai
+#Zachary Klein
+#Owen Du
+#Matthew Kim
+#Andy Wang
+#Yichen Cai
 
 
 ## Version History
