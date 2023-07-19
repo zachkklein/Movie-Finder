@@ -62,6 +62,16 @@ select {
     font-size: 16px;
 }
 
+input[type="number"],
+select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
 
 
 input[type="submit"] {
@@ -147,9 +157,9 @@ a{
     margin-bottom: 40px;
     display: none;
     width: 45%;
-    height: 543px;
+    height: 443.5px;
     width: 500px;
-    transform: translate3d(58%, -117.2%, 0);
+    transform: translate3d(58%, -120.83%, 0);
     transition: 2s;
 }
 

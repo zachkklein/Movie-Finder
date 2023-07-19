@@ -1,14 +1,16 @@
 from flask import Flask, request, jsonify, render_template, redirect
-import tkinter #IMPORT MODEL CODE NOT TKINTER
+from control_part2 import mainpart, df_tolist
 
 app = Flask(__name__)
 
-def answers(genre, actor, language, length, rating):
-    responses = {'genre': genre, 'actor': actor, 'langauge': language, 'length': length, 'rating': rating}
+def answers(genre, actor, year):
+    responses = {'genre': genre, 'actor': actor, 'year': year}
     return responses
 
+#Empty list that will be updated with inputs
 movieList = []
 
+#Routing / to index.html
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -17,16 +19,17 @@ def index():
 def getRecommendations():
    #data = request.json  # Get data sent from the frontend
     # Call your Python model function with the data
-    genre = request.form.get('genre')
-    actor = request.form.get('actor')
-    language = request.form.get('language')
-    length = request.form.get('length')
-    rating = request.form.get('rating')
-    movieList.append(answers(genre, actor, language, length, rating)) #CHANGE LINE WHEN CODE DONE
+    user_ing = request.form.get('genre')
+    user_inc = request.form.get('actor')
+    user_date = request.form.get('year')
+    show_df = mainpart(user_ing, user_inc, user_date)
+    final_one=df_tolist(show_df)
+    print(final_one)
     return redirect('/')
     # recommendations = modelName.getRecommendations(data) #modelName is the imported model
     # return jsonify(recommendations) 
 
+#prints the list when /print is added to url-path
 @app.route('/print')
 def printList():
     print(*movieList, sep='\n')

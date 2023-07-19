@@ -1,4 +1,4 @@
-//help used for scroll: https://alvarotrigo.com/blog/css-animations-scroll/
+//help used for scroll visual effect: https://alvarotrigo.com/blog/css-animations-scroll/
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
     for (var i = 0; i < reveals.length; i++) {
@@ -14,6 +14,7 @@ function reveal() {
   }
   
   window.addEventListener("scroll", reveal);
+  // end scroll section
 
   //Makes form move left when submitted
   const getRecommendationsBtn = document.getElementById('getRecommendationsBtn');

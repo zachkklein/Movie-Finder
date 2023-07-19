@@ -17,7 +17,7 @@
         <img class="fixedLogo" src="../static/MFLOGO.png" alt="Movie Finder Logo">
         <h1 class="top">Movie Finder</h1>
         <h3>Your pair movie recommender</h3>
-        <a href="#length"><button>Take me there</button></a>
+        <a href="#year"><button>Take me there</button></a>
     </section>
 
     <div class="bottomSection">
@@ -40,27 +40,9 @@
         <label for="actor">Preferred Actor/Actress:</label>
         <input type="text" id="actor" name="actor" required>
 
-        <label for="language">Enter a language:</label>
-        <!--MAYBE CHANGE TO SELECT-->
-        <input type="text" id="language" name="language" required>
+        <label class="year" for="year">Enter preferred year:</label>
+        <input type="text" id="year" name="year" required >
 
-        <label for="length">Choose a length:</label>
-        <select class="length" id="length" name="length" required>
-            <option value="select">Select an option</option>
-            <option value="short">Short(00:00-1:20)</option>
-            <option value="medium">Medium(1:20-2:00)</option>
-            <option value="long">Long(2:00-3:15)</option>
-        </select>
-
-        <label for="rating">Choose a content rating:</label>
-        <select id="rating" name="rating" required>
-        <option value="select">Select an option</option>
-        <option value="g">G</option>
-        <option value="pg">PG</option>
-        <option value="pg13">PG-13</option>
-        <option value="r">R</option>
-        </select>
-    
         <input type="submit" value="Get Recommendations" id="getRecommendationsBtn">
     </form>
     </section> 
@@ -77,7 +59,7 @@
     </div>
     
 
-    <!--This connecting javascript doc with html-->
+    <!--This connects javascript to html-->
     <script src="../static/movie.js"></script>
 
 
