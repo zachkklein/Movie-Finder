@@ -34,11 +34,11 @@ There will be no issues
 
 ## Authors
 
-#Zachary Klein
-#Owen Du
-#Matthew Kim
-#Andy Wang
-#Yichen Cai
+Zachary Klein,
+Owen Du,
+Matthew Kim,
+Andy Wang,
+Yichen Cai,
 
 
 ## Version History
