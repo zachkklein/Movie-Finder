@@ -41,10 +41,12 @@ There will be no issues
 ## Authors
 
 Zachary Klein,
+Yichen Cai,
 Owen Du,
 Matthew Kim,
+and
 Andy Wang,
-Yichen Cai,
+
 
 
 ## Version History
@@ -63,4 +65,4 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* 
+* Front end help from: https://alvarotrigo.com/blog/css-animations-scroll/
