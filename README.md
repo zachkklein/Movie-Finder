@@ -5,7 +5,7 @@
 
 
 ## Interaction/Getting Started
-Users will be prompted for specific prerequisites to find the perfect movie such as maturity rating, specific actors/actresses, genre, etc. and the program will output movies depending on what the user inputted.
+Users will be prompted for specific prerequisites to find the perfect movie such as genre, specific actors/actresses, language, and preferred year. The program will output movies depending on what the user inputted.
 
 
 
@@ -14,13 +14,19 @@ Users will be prompted for specific prerequisites to find the perfect movie such
 
 Users will be required to download Flask prior to utilizing the program 
 
+```
+pip install Flask
+```
+
 
 
 
 ### Executing program
 
-The program runs through  python app.py  in the terminal 
-
+The program runs through python app.py in the terminal 
+```
+python app.py
+```
 
 
 
