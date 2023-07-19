@@ -9,7 +9,7 @@ class moviedata():
     
     def __init__(self) -> None:
         self.credits_2_df=pd.read_csv("archive\credits-2.csv").drop_duplicates().copy()
-        self.movies_df=pd.read_csv("archive\movies_metadata.csv",low_memory=False,dtype=str).filter(items=["adult","popularity","budget","genres","homepage","id","imdb_id","original_title","overview","production_companies","production_countries","release_date","spoken_languages","vote_average","vote_count"]).copy()
+        self.movies_df=pd.read_csv("archive\movies_metadata.csv",dtype=str).filter(items=["adult","popularity","budget","genres","homepage","id","imdb_id","original_title","overview","production_companies","production_countries","release_date","spoken_languages","vote_average","vote_count","tagline"]).copy()
         #user 
         # first use search to find their like movies:output movie id (yep)
         # then find the wanted genre,wanted 
@@ -38,7 +38,7 @@ class moviedata():
         self.movies_df=pd.concat([self.movies_df,self.credits_2_df],axis=1,join="outer")
         inx=self.movies_df.shape[1]-1
         self.movies_df=self.movies_df.iloc[:,[x for x in range(inx)]]
-        self.movies_df=self.movies_df.dropna(axis=0,how="any")
+        self.movies_df=self.movies_df.dropna(axis=0,how="any",subset=["adult","popularity","budget","genres","homepage","id","imdb_id","original_title","overview","production_companies","production_countries","release_date","spoken_languages","vote_average","vote_count"])
         self.userdata=[]
 
 
@@ -235,19 +235,23 @@ class moviedata():
         self.userdata.append(self.add_userdata(movie_ids=movie_idsl))
     
     def alles_inner_extract(self,movie_ids:list,rEALLYONLY=True,df=pd.DataFrame(),usemydf=False): # serach the cast 找出用户喜欢的电影中出现的角色 ,genre
-            #print(self.movies_df["id"].iloc[_0])
+            #print(self.movies_df["id"].iloc[_0]) #REALLYONLY SAME as only 
             #this part idont wanna write method and iter it because it seems many bugs will flow out and difficult to read in iter state
         if usemydf:
             wantedmovies_df=moviedata.search(df,Only=rEALLYONLY,id=movie_ids)
         else:
             wantedmovies_df=moviedata.search(self.movies_df,Only=rEALLYONLY,id=movie_ids) # find the user wanted movies, ONLY SHOULD BE TRUE
-        castline_newp=pd.DataFrame({"name&gender":[],"count":[]},dtype=str)
-        genreline_newp=pd.DataFrame({"id&name":[],"count":[]},dtype=str)
-        companyline_newp=pd.DataFrame({"companyname":[],"count":[]},dtype=str)
-        country_newp=pd.DataFrame({"countryname":[],"count":[]},dtype=str)
-        timeline_newp=np.array(wantedmovies_df["release_date"].apply(lambda x:int(x[0:4])),dtype=float)
-        timeline_newp=int(round(float(timeline_newp.mean(keepdims=True)),0))
-
+        #castline_newp=pd.DataFrame({"name&gender":[],"count":[]},dtype=str)
+        #genreline_newp=pd.DataFrame({"id&name":[],"count":[]},dtype=str)
+        #companyline_newp=pd.DataFrame({"companyname":[],"count":[]},dtype=str)
+        #country_newp=pd.DataFrame({"countryname":[],"count":[]},dtype=str)
+        
+        #timeline_newp=np.array(wantedmovies_df["release_date"].apply(lambda x:int(x[0:4])),dtype=float)
+        #timeline_newp=int(round(float(timeline_newp.mean(keepdims=True)),0))
+        castline_newp=[]
+        genreline_newp=[]
+        companyline_newp=[]
+        country_newp=[]
         #empty data init
         #print(wantedmovies_df)
         for _0 in range(wantedmovies_df.shape[0]):
@@ -273,73 +277,27 @@ class moviedata():
                 #genreline_newp=pd.concat([genreline_newp,temp_moviekew],axis=0)
                 for _2 in range(credits_cast.shape[0]):#join name and gender together Yes oR add up the count number CREDIT part
                     nginfo="_".join([str(credits_cast["name"].iloc[_2]),str(credits_cast["gender"].iloc[_2])]) 
-                    if not (castline_newp["name&gender"].isin([nginfo]).any()): #this method to check if in is faster!!!! 0.1s difference
-                    #if not(nginfo in castline_newp["name&gender"].values): # slower one
-                        tempones=pd.DataFrame({"name&gender":[nginfo],"count":["1"]})
-                        castline_newp=pd.concat([castline_newp,tempones],axis=0)
-                    else:
-                        #Checkforright=False
-                        for i in range(castline_newp.shape[0]):
-                            if(castline_newp["name&gender"].iloc[i]==nginfo):
-                                castline_newp["count"].iloc[i]=str(int(castline_newp["count"].iloc[i])+1)
-                                #Checkforright=True
-                                break
-                        #print(Checkforright)
+                    castline_newp.append(nginfo)
                         
                         
 
                 for _2 in range(temp_moviekew.shape[0]):#join name and gender together Yes oR add up the count number GENRE part
                     ninfo=str(temp_moviekew["name"].iloc[_2])
-                    if not (genreline_newp["id&name"].isin([ninfo]).any()):
-                        temptwos=pd.DataFrame({"id&name":[ninfo],"count":["1"]})
-                        genreline_newp=pd.concat([genreline_newp,temptwos],axis=0)
-            
-                    else:
-                        #Checkforright=False
-                        for i in range(genreline_newp.shape[0]):
-                            if(genreline_newp["id&name"].iloc[i]==ninfo):
-                                genreline_newp["count"].iloc[i]=str(int(genreline_newp["count"].iloc[i])+1)
-                                #Checkforright=True
-                                break
-                        #print(Checkforright)
+                    genreline_newp.append(ninfo)
 
                 
 
                 for _2 in range(temp_company.shape[0]):#join name and gender together Yes oR add up the count number COMPANY part
                     com_info=str(temp_company["name"].iloc[_2])
-                    if not (companyline_newp["companyname"].isin([com_info]).any()):
-                        tempthree=pd.DataFrame({"companyname":[com_info],"count":["1"]})
-                        companyline_newp=pd.concat([companyline_newp,tempthree],axis=0)
-            
-                    else:
-                        #Checkforright=False
-                        for i in range(companyline_newp.shape[0]):
-                            if(companyline_newp["companyname"].iloc[i]==com_info):
-                                companyline_newp["count"].iloc[i]=str(int(companyline_newp["count"].iloc[i])+1)
-                                #Checkforright=True
-                                break
-                        #print(Checkforright)
-                
+                    companyline_newp.append(com_info)
 
                 for _2 in range(temp_country.shape[0]):#join name and gender together Yes oR add up the count number COMPANY part
                     area_info=str(temp_country["iso_3166_1"].iloc[_2])
-                    if not (country_newp["countryname"].isin([area_info]).any()):
-                        tempfour=pd.DataFrame({"countryname":[area_info],"count":["1"]})
-                        country_newp=pd.concat([country_newp,tempfour],axis=0)
-            
-                    else:
-                        #Checkforright=False
-                        for i in range(country_newp.shape[0]):
-                            if(country_newp["countryname"].iloc[i]==area_info):
-                                country_newp["count"].iloc[i]=str(int(country_newp["count"].iloc[i])+1)
-                                #Checkforright=True
-                                break
-                        #print(Checkforright)
-                        
+                    country_newp.append(area_info)
                         
 
 
-        return [castline_newp,genreline_newp,companyline_newp,country_newp,timeline_newp]
+        return [wantedmovies_df["id"].iloc[_0],wantedmovies_df["overview"].iloc[_0],wantedmovies_df["tagline"].iloc[_0],castline_newp,genreline_newp,companyline_newp,country_newp,wantedmovies_df["release_date"].iloc[_0][0:4]]
 
                          
         
