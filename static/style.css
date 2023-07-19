@@ -1,6 +1,5 @@
 html{
     scroll-behavior: smooth;
-
  }
 
 body {
@@ -109,7 +108,7 @@ button{
 }
 
 button:hover{
-    background-color: #FFEADD;
+    background-color: #a9a9a9;
 }
 
 a:hover{
@@ -164,7 +163,6 @@ a{
     position: fixed;
     top: 0;
     z-index: 100;
-
   }
 
   #bottomSection{

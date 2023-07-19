@@ -3,11 +3,11 @@ import tkinter #IMPORT MODEL CODE NOT TKINTER
 
 app = Flask(__name__)
 
-def inputs(genre, actor, language, length, rating):
+def answers(genre, actor, language, length, rating):
     responses = {'genre': genre, 'actor': actor, 'langauge': language, 'length': length, 'rating': rating}
     return responses
 
-emptyList = []
+movieList = []
 
 @app.route('/')
 def index():
@@ -22,14 +22,14 @@ def getRecommendations():
     language = request.form.get('language')
     length = request.form.get('length')
     rating = request.form.get('rating')
-    emptyList.append(inputs(genre, actor, language, length, rating)) #CHANGE LINE WHEN CODE DONE
+    movieList.append(answers(genre, actor, language, length, rating)) #CHANGE LINE WHEN CODE DONE
     return redirect('/')
     # recommendations = modelName.getRecommendations(data) #modelName is the imported model
     # return jsonify(recommendations) 
 
 @app.route('/print')
 def printList():
-    print(*emptyList, sep='\n')
+    print(*movieList, sep='\n')
     return redirect('/')
 
 if __name__ == '__main__':

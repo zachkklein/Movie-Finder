@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Finder</title>
-    <link href="static/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='static/style.css') }}">
+    <link href="../static/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Caprasimo&display=swap" rel="stylesheet">
-    <link rel="icon" href="static/MFLOGO.png">
+    <link rel="icon" href="../static/MFLOGO.png">
 </head>
 <body>
     <!--This is the code for the landing page-->
     <section class="homePage">
-        <img class="fixedLogo" src="static/MFLOGO.png" alt="Movie Finder Logo">
+        <img class="fixedLogo" src="../static/MFLOGO.png" alt="Movie Finder Logo">
         <h1 class="top">Movie Finder</h1>
         <h3>Your pair movie recommender</h3>
-        <button><a href="#length">Take me there</a></button>
+        <a href="#length"><button>Take me there</button></a>
     </section>
 
     <div class="bottomSection">
     <section id="formSection" class="reveal">
     <!--This is the submit form-->
+    <!--action="/recommendations" sends it to non existant url while local-->
     <form id="movieForm" action="/recommendations" method="post">
         <!--names: genre, actor, language, length, rating-->
         <label for="genre">Choose a genre:</label>
@@ -77,7 +78,7 @@
     
 
     <!--This connecting javascript doc with html-->
-    <script src="static/movie.js"></script>
+    <script src="../static/movie.js"></script>
 
 
 </body>

@@ -21,12 +21,15 @@ function reveal() {
   const recommendationsSection = document.getElementById('recommendations');
 
   getRecommendationsBtn.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent form submission POSSIBLE ISSUE!!!
+      // event.preventDefault();  // Prevent form submission POSSIBLE ISSUE NEED TO FIX!!!
 
       // Move the form section to the left
       formSection.style.transform = 'translateX(-55%)';
 
+      
+
       // Display the recommendations section
       recommendationsSection.style.display = 'block';
+      form.submit();
       
   });
