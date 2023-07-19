@@ -12,10 +12,12 @@ Users will be prompted for specific prerequisites to find the perfect movie such
 
 ### Dependencies/Installing
 
-Users will be required to download Flask prior to utilizing the program 
+Users will be required to download Flask, pandas, and numpy prior to utilizing the program 
 
 ```
 pip install Flask
+pip intsall pandas
+pip install numpy
 ```
 
 
