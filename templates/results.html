@@ -17,21 +17,27 @@
     <section>
         <!-- This is where results are shown -->
         <div id="recommendations">
-            {% if final_one %}
-                {% for item in final_one %}
-                    <div id="movieHeader">{{ item[1] }}</div>
-                    <div id="movieDescription">{{ item[2] }}</div>
-                {% endfor %}
-            {% else %}
-                <div id="movieDescription>"><p>Error, check the spelling or input different information</p></div>
-            {% endif %}
-            <a href="/" class="backHomeButton"><button>Back Home</button></a>
+            {% try %}
+                {% if final_one %}
+                    {% for item in final_one %}
+                        <div id="movieHeader">{{ item[1] }}</div>
+                        <div id="movieDescription">{{ item[2] }}</div>
+                    {% endfor %}
+                {% else %}
+                    <div id="movieDescription>"><p>Error, check the spelling or input different information</p></div>
+                {% endif %}
+            {% except %}
+                <div id="movieDescription>"><p>An error occurred while processing the data.</p></div>
+            {% endtry %}
+            
+            <a href="/"><button class="backHomeButton">Back Home</button></a>
         </div>
         
     </section>
 
     <!-- Nice message -->
     <p>Made with ❤️ in Medford, MA</p>
+    <p class="copyRight">Copyright(c) 2023 The Flunky Five</p>
 
     <!-- This connects javascript to html -->
     <script src="../static/movie.js"></script>

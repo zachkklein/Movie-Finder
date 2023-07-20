@@ -217,6 +217,15 @@ a{
     right: 650px;
   }
 
+  .copyRight{
+    font-size: 12px;
+  }
+
+  #errorDescriptiom{
+    color: red;
+    font-size: 50px;
+  }
+
   /* MEDIA QUERY DOESN'T REALLY WORK */
   @media (max-width: 768px) {
    
@@ -242,3 +251,4 @@ a{
     #recommendations {
       transform: translate3d(0, 0, 0);} 
   }
+
