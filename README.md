@@ -59,7 +59,12 @@ There will be no issues
 
 
 ## Version History
-
+* 0.4
+    * App is now fully functional
+    * Adaptive styling 
+* 0.3
+    * Style updates
+    * Quality Updates
 * 0.2
     * Various bug fixes and optimizations
     * See [commit change]() or See [release history]()
