@@ -8,7 +8,7 @@ warnings.filterwarnings("ignore")
 class moviedata():
     
     def __init__(self) -> None:
-        self.credits_2_df=pd.read_csv("archive/credits-2.csv").drop_duplicates().copy()
+        self.credits_2_df=pd.read_csv("archive/credits.csv").drop_duplicates().copy()
         self.movies_df=pd.read_csv("archive/movies_metadata.csv",dtype=str).filter(items=["adult","popularity","budget","genres","homepage","id","imdb_id","original_title","overview","production_companies","production_countries","release_date","spoken_languages","vote_average","vote_count","tagline"]).copy()
         #user 
         # first use search to find their like movies:output movie id (yep)

@@ -16,16 +16,22 @@ def mainpart(user_ing, user_inc, user_date):
         return wanted_df.head(100)
     else:
         return wanted_df
-    
+
+
 def df_tolist(df:pd.DataFrame):
     final_output=[]
+    empty_list = []
+    print(f"From df_list: {df}")
     for row in range(df.shape[0]):
         id_ofmovie=df["id"].iloc[row] #HERE to put id eg.862 all in str
         output=user_1.alles_inner_extract(df=user_1.movies_df,movie_ids=[id_ofmovie],usemydf=True,rEALLYONLY=True) #using id of the movie to extract data
         final_output.append(output)
         return final_output
     
-    #add extraction of move title from list
+    if final_output == []:
+        print('Error')
+    
+    #add extraction of movie title from list
         
     #OUTPUT FORMAT:
     #!!! if shown nan means this movie does not has this section.Just skip   

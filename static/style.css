@@ -118,7 +118,7 @@ button{
 }
 
 button:hover{
-    background-color: #a9a9a9;
+    background-color: #A9A9A9;
 }
 
 a:hover{
@@ -157,10 +157,10 @@ a{
     margin-bottom: 40px;
     display: none;
     width: 45%;
-    height: 443.5px;
+    height: 344px;
     width: 500px;
-    transform: translate3d(58%, -120.83%, 0);
-    transition: 2s;
+    transform: translate3d(58%, -126.1%, 0);
+    transition: 4s;
 }
 
 .fixedLogo {
@@ -183,4 +183,19 @@ a{
     height: 600px;
     overscroll-behavior: contain;
     overflow-y: hidden;
+  }
+
+  #recommendations{
+    vertical-align: middle;
+  }
+
+  #movieHeader{
+    font-size: 45px;
+    color: #FF6666;
+    font-family: 'Caprasimo', cursive;
+  }
+
+  #movieDescription{
+    font-size: 20px;
+    color: #363636;
   }

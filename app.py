@@ -10,6 +10,7 @@ def answers(genre, actor, year):
 #Empty list that will be updated with inputs
 movieList = []
 
+
 #Routing / to index.html
 @app.route('/')
 def index():
@@ -25,7 +26,10 @@ def getRecommendations():
     show_df = mainpart(user_ing, user_inc, user_date)
     final_one=df_tolist(show_df)
     print(final_one)
-    return redirect('/')
+    return render_template('index.html', user_ing = request.form.get('genre'), user_inc = request.form.get('actor'), user_date = request.form.get('year'), final_one=final_one)
+  
+    #HTML needs to print put final_one
+    #return redirect('/')
     # recommendations = modelName.getRecommendations(data) #modelName is the imported model
     # return jsonify(recommendations) 
 
