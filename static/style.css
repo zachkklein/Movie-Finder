@@ -219,12 +219,17 @@ a{
 
   .copyRight{
     font-size: 12px;
+    color: #FF6666;
   }
 
-  #errorDescriptiom{
-    color: red;
-    font-size: 50px;
+  .errorText{
+    color: #FF6666;
+    font-family: 'Caprasimo', cursive;
+    font-size: 40px;
+    padding-top: 30px;
   }
+
+
 
   /* MEDIA QUERY DOESN'T REALLY WORK */
   @media (max-width: 768px) {
