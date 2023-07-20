@@ -199,3 +199,29 @@ a{
     font-size: 20px;
     color: #363636;
   }
+
+  /* MEDIA QUERY DOESN'T REALLY WORK */
+  @media (max-width: 768px) {
+   
+    h1 {
+      font-size: 100px; 
+    }
+  
+    h3 {
+      font-size: 30px; 
+    }
+  
+    
+    #formSection {
+      width: 80%; 
+    }
+  
+    input[type="text"],
+    select {
+      width: 90%; 
+    }
+  
+   
+    #recommendations {
+      transform: translate3d(0, 0, 0);} 
+  }
