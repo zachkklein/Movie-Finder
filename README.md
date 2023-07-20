@@ -48,7 +48,7 @@ There will be no issues
 
 
 
-## Authors: **The Flunky Five**
+## Authors
 
 * Zachary Klein - Lead Programmer
 * Yichen Cai - Lead Programmer
