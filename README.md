@@ -16,7 +16,11 @@ Users will be required to download Flask, pandas, and numpy prior to utilizing t
 
 ```
 pip install Flask
+```
+```
 pip intsall pandas
+```
+```
 pip install numpy
 ```
 
@@ -42,11 +46,11 @@ There will be no issues
 
 ## Authors
 
-* Zachary Klein
-* Yichen Cai
-* Owen Du
-* Matthew Kim
-* Andy Wang
+* Zachary Klein - Lead Programmer
+* Yichen Cai - Lead Programmer
+* Owen Du - Project Manager
+* Matthew Kim - Quality Control Analyst
+* Andy Wang - Head Artist
 
 
 
@@ -61,7 +65,7 @@ There will be no issues
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE file for details
 
 ## Acknowledgments
 
