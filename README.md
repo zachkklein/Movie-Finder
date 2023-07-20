@@ -42,7 +42,9 @@ python app.py
 
 ## Help
 
-There will be no issues
+Possible reasons for error once input is submitted:
+* Incorrect spelling
+* Movie is not in database
 
 
 
