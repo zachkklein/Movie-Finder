@@ -156,9 +156,10 @@ a{
     margin-top: 40px;
     margin-bottom: 40px;
     width: 45%;
-    height: 344px;
+    height: auto;
     width: 500px;   
     transition: .3s;
+    display: table; text-align: center;
 }
 
 #recommendations:hover{
@@ -212,9 +213,8 @@ a{
     text-decoration: none;
     font-size: 20px;
     transition: 0.7s;
-    position: absolute;
-    bottom: 315px;
-    right: 650px;
+    display: table-cell; vertical-align: bottom;
+    
   }
 
   .copyRight{
