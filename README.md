@@ -18,7 +18,12 @@ Users need to download credits.csv and movie_metadata.csv from the following lin
 
   <p>&nbsp;</p>
 
-Users will be required to download Flask(2.0.3), pandas(1.5.2), and numpy(1.23.5) prior to utilizing the program using the command below
+Users can clone the repository here
+```
+git clone https://github.com/zachkklein/Movie-Recommender.git
+```
+
+Users will be required to download Flask(2.0.3), pandas(1.5.2), and numpy(1.23.5) prior to utilizing the program
 
 ```
 pip install -r requirements.txt
