@@ -44,7 +44,7 @@ class moviedata():
 
 
     def forsort(df,givendate):
-        df.insert(0,"date_diff",[str(-abs(int(givendate)-int(df["release_date"].iloc[x][0:4]))) for x in range(df.shape[0])])
+        df.insert(0,"date_diff",[int(-abs(int(givendate)-int(df["release_date"].iloc[x][0:4]))) for x in range(df.shape[0])])
         #self.movies_df.sort_values(by=["date_diff"],ascending=False,inplace=True)
         df.sort_values(by=["date_diff","vote_average","popularity"],ascending=False,inplace=True)
 
