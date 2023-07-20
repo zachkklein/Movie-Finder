@@ -28,8 +28,6 @@ def df_tolist(df:pd.DataFrame):
         final_output.append(output)
         return final_output
     
-    if final_output == []:
-        print('Error')
     
     #add extraction of movie title from list
         

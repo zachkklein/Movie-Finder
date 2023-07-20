@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Finder</title>
+    <link href="../static/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Caprasimo&display=swap" rel="stylesheet">
+    <link rel="icon" href="../static/MFLOGO.png">
+</head>
+<body>
+    <img class="fixedLogo" src="../static/MFLOGO.png" alt="Movie Finder Logo">
+
+    <section>
+        <!-- This is where results are shown -->
+        <div id="recommendations">
+            {% for item in final_one %}
+            <div id="movieHeader">{{ item[1] }}</div>
+            <div id="movieDescription">{{ item[2] }}</div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Nice message -->
+    <p>Made with ❤️ in Medford, MA</p>
+
+    <!-- This connects javascript to html -->
+    <script src="../static/movie.js"></script>
+
+</body>
+</html>

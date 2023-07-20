@@ -155,13 +155,16 @@ a{
     margin: 0 auto;
     margin-top: 40px;
     margin-bottom: 40px;
-    display: none;
     width: 45%;
     height: 344px;
-    width: 500px;
-    transform: translate3d(58%, -126.1%, 0);
-    transition: 4s;
+    width: 500px;   
+    transition: .3s;
 }
+
+#recommendations:hover{
+  box-shadow: 3px 6px;
+}
+
 
 .fixedLogo {
     height: 80px;
@@ -185,9 +188,6 @@ a{
     overflow-y: hidden;
   }
 
-  #recommendations{
-    vertical-align: middle;
-  }
 
   #movieHeader{
     font-size: 45px;

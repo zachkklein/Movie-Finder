@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template, redirect
+from flask import Flask, request, render_template, redirect
 from control_part2 import mainpart, df_tolist
 
 app = Flask(__name__)
@@ -26,12 +26,10 @@ def getRecommendations():
     show_df = mainpart(user_ing, user_inc, user_date)
     final_one=df_tolist(show_df)
     print(final_one)
-    return render_template('index.html', user_ing = request.form.get('genre'), user_inc = request.form.get('actor'), user_date = request.form.get('year'), final_one=final_one)
+    return render_template('results.html', user_ing = request.form.get('genre'), user_inc = request.form.get('actor'), user_date = request.form.get('year'), final_one=final_one)
   
     #HTML needs to print put final_one
     #return redirect('/')
-    # recommendations = modelName.getRecommendations(data) #modelName is the imported model
-    # return jsonify(recommendations) 
 
 #prints the list when /print is added to url-path
 @app.route('/print')
