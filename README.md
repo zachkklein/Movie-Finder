@@ -2,6 +2,8 @@
 # Movie Recommender
  A browser-based program that recommends movies to those who are stuck for hours trying to figure out what to watch
 
+https://github.com/zachkklein/Movie-Recommender/assets/106212306/acb38504-e1e4-4f1c-8c3d-96506979aace
+
 
 
 ### Interaction/Getting Started
