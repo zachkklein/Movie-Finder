@@ -15,7 +15,7 @@ Users will be prompted for specific prerequisites to find the perfect movie such
 
 ### Dependencies/Installing
 
-Users need to download credits.csv and movie_metadata.csv from the following link and store them in a folder named archive
+Users need to download the CSV files from the following link and store them in a folder named archive
 * Kaggle dataset link: https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset
  * Make sure the archive folder with the CSV files is in the Movie-Recommender folder
 
