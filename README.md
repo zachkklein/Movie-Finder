@@ -18,20 +18,11 @@ Users need to download credits.csv and movie_metadata.csv from the following lin
 
   <p>&nbsp;</p>
 
-Users will be required to download Flask, pandas, and numpy prior to utilizing the program 
+Users will be required to download Flask(2.0.3), pandas(1.5.2), and numpy(1.23.5) prior to utilizing the program using the command below
 
 ```
-pip install Flask
+pip install -r requirements.txt
 ```
-```
-pip intsall pandas
-```
-```
-pip install numpy
-```
-
-
-
 
 ### Executing program
 
