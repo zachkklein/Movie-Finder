@@ -5,12 +5,16 @@
 
 
 ### Interaction/Getting Started
-Users will be prompted for specific prerequisites to find the perfect movie such as genre, specific actors/actresses, language, and preferred year. The program will output movies depending on what the user inputted.
-
+Users will be prompted for specific prerequisites to find the perfect movie such as genre, specific actors/actresses, language, and preferred year. The program will output movies depending on what the user inputs.
 
 
 
 ### Dependencies/Installing
+
+Users need to download credits.csv and movie_metadata.csv from the following link and store them in a folder named archive
+* Kaggle dataset link: https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset
+
+  <p>&nbsp;</p>
 
 Users will be required to download Flask, pandas, and numpy prior to utilizing the program 
 
@@ -70,4 +74,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
+* Kaggle dataset used: https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset
 * Front end help from: https://alvarotrigo.com/blog/css-animations-scroll/
