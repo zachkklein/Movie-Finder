@@ -10,7 +10,6 @@ def answers(genre, actor, year):
 #Empty list that will be updated with inputs
 movieList = []
 
-
 #Routing / to index.html
 @app.route('/')
 def index():
