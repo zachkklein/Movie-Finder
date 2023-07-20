@@ -5,7 +5,7 @@
 
 
 ### Interaction/Getting Started
-Users will be prompted for specific prerequisites to find the perfect movie such as genre, specific actors/actresses, language, and preferred year. The program will output movies depending on what the user inputs.
+Users will be prompted for specific prerequisites to find the perfect movie such as genre, specific actors/actresses, and preferred year. The program will output movies depending on what the user inputs.
 
 
 
