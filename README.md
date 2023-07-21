@@ -53,8 +53,8 @@ Possible reasons for error once input is submitted:
 
 ## Authors
 
-* Zachary Klein - Lead Programmer
-* Yichen Cai - Lead Programmer
+* Zachary Klein - Front-End Development and Integration Engineer
+* Yichen Cai - Back-End Development Engineer
 * Owen Du - Project Manager
 * Matthew Kim - Quality Control Analyst
 * Andy Wang - Head Artist
